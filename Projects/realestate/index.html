@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebAura Estates - Premium Real Estate Listings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Real <span>Estate</span></h1>
+            </div>
+            <nav>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#properties">Properties</a></li>
+                    <li><a href="#featured">Featured</a></li>
+                    <li><a href="#agents">Agents</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn secondary">List Property</a>
+                <a href="#properties" class="btn primary">Find Home</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Find Your Dream Home</h1>
+            <p>Discover the perfect property that matches your lifestyle and aspirations</p>
+            <div class="search-container">
+                <form id="property-search">
+                    <div class="search-box">
+                        <div class="search-row">
+                            <div class="search-group">
+                                <label for="property-type">Property Type</label>
+                                <select id="property-type">
+                                    <option value="all">All Properties</option>
+                                    <option value="house">House</option>
+                                    <option value="apartment">Apartment</option>
+                                    <option value="villa">Villa</option>
+                                    <option value="land">Land</option>
+                                </select>
+                            </div>
+                            <div class="search-group">
+                                <label for="location">Location</label>
+                                <select id="location">
+                                    <option value="all">All Locations</option>
+                                    <option value="downtown">Downtown</option>
+                                    <option value="suburbs">Suburbs</option>
+                                    <option value="beachfront">Beachfront</option>
+                                    <option value="countryside">Countryside</option>
+                                </select>
+                            </div>
+                            <div class="search-group">
+                                <label for="price-range">Price Range</label>
+                                <select id="price-range">
+                                    <option value="all">Any Price</option>
+                                    <option value="100000-300000">$100k - $300k</option>
+                                    <option value="300000-500000">$300k - $500k</option>
+                                    <option value="500000-1000000">$500k - $1M</option>
+                                    <option value="1000000+">$1M+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="search-row">
+                            <div class="search-group">
+                                <label for="bedrooms">Bedrooms</label>
+                                <select id="bedrooms">
+                                    <option value="any">Any</option>
+                                    <option value="1">1+</option>
+                                    <option value="2">2+</option>
+                                    <option value="3">3+</option>
+                                    <option value="4">4+</option>
+                                    <option value="5">5+</option>
+                                </select>
+                            </div>
+                            <div class="search-group">
+                                <label for="bathrooms">Bathrooms</label>
+                                <select id="bathrooms">
+                                    <option value="any">Any</option>
+                                    <option value="1">1+</option>
+                                    <option value="2">2+</option>
+                                    <option value="3">3+</option>
+                                    <option value="4">4+</option>
+                                </select>
+                            </div>
+                            <div class="search-group search-button">
+                                <button type="submit" class="btn primary">Search Properties</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <section id="featured" class="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Properties</h2>
+                <p>Exclusive selection of premium properties</p>
+            </div>
+            <div class="featured-slider">
+                <div class="featured-property">
+                    <div class="property-tag">Featured</div>
+                    <div class="property-image">
+                        <img src="images/sven-V7WkmXntA8M-unsplash.jpg" alt="Luxury Villa">
+                        <div class="property-price">$1,250,000</div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Luxury Beachfront Villa</h3>
+                        <p class="property-address"><i class="fas fa-map-marker-alt"></i> 123 Coastal Drive, Malibu, CA</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 5 Beds</span>
+                            <span><i class="fas fa-bath"></i> 4 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 4,200 sqft</span>
+                        </div>
+                        <p class="property-description">Stunning beachfront villa with panoramic ocean views, private pool, and direct beach access. Modern architecture with high-end finishes throughout.</p>
+                        <a href="#" class="btn secondary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="stat-number" data-count="1500">0</div>
+                    <div class="stat-title">Properties Listed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <div class="stat-number" data-count="850">0</div>
+                    <div class="stat-title">Properties Sold</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-count="1200">0</div>
+                    <div class="stat-title">Happy Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="stat-number" data-count="25">0</div>
+                    <div class="stat-title">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="properties" class="properties">
+        <div class="container">
+            <div class="section-header">
+                <h2>Explore Properties</h2>
+                <p>Find the perfect property that suits your needs</p>
+            </div>
+            <div class="property-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="sale">For Sale</button>
+                <button class="filter-btn" data-filter="rent">For Rent</button>
+                <button class="filter-btn" data-filter="new">New Listing</button>
+            </div>
+            <div class="properties-grid">
+                <div class="property-card" data-category="sale new">
+                    <div class="property-tag sale">For Sale</div>
+                    <div class="property-image">
+                        <img src="images/farhan-azam-2NI2ZKDFbq8-unsplash.jpg" alt="Modern Apartment">
+                        <div class="property-price">$425,000</div>
+                        <div class="property-overlay">
+                            <a href="#" class="btn-view"><i class="fas fa-search"></i></a>
+                            <a href="#" class="btn-save"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Modern Downtown Apartment</h3>
+                        <p class="property-address"><i class="fas fa-map-marker-alt"></i> 456 Urban St, Downtown</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 2 Beds</span>
+                            <span><i class="fas fa-bath"></i> 2 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 1,200 sqft</span>
+                        </div>
+                        <a href="#" class="btn secondary">View Details</a>
+                    </div>
+                </div>
+                <div class="property-card" data-category="rent">
+                    <div class="property-tag rent">For Rent</div>
+                    <div class="property-image">
+                        <img src="images/parrish-freeman-OMYgQVv0Puw-unsplash.jpg" alt="Luxury Condo">
+                        <div class="property-price">$3,500/mo</div>
+                        <div class="property-overlay">
+                            <a href="#" class="btn-view"><i class="fas fa-search"></i></a>
+                            <a href="#" class="btn-save"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Luxury Highrise Condo</h3>
+                        <p class="property-address"><i class="fas fa-map-marker-alt"></i> 789 Skyview Ave, Midtown</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 3 Beds</span>
+                            <span><i class="fas fa-bath"></i> 2 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 1,800 sqft</span>
+                        </div>
+                        <a href="#" class="btn secondary">View Details</a>
+                    </div>
+                </div>
+                <div class="property-card" data-category="sale">
+                    <div class="property-tag sale">For Sale</div>
+                    <div class="property-image">
+                        <img src="images/amy-humphries-1yLOj0mX5XI-unsplash.jpg" alt="Family Home">
+                        <div class="property-price">$750,000</div>
+                        <div class="property-overlay">
+                            <a href="#" class="btn-view"><i class="fas fa-search"></i></a>
+                            <a href="#" class="btn-save"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Spacious Family Home</h3>
+                        <p class="property-address"><i class="fas fa-map-marker-alt"></i> 321 Maple Dr, Suburbs</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 4 Beds</span>
+                            <span><i class="fas fa-bath"></i> 3 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 2,800 sqft</span>
+                        </div>
+                        <a href="#" class="btn secondary">View Details</a>
+                    </div>
+                </div>
+                <div class="property-card" data-category="rent new">
+                    <div class="property-tag rent">For Rent</div>
+                    <div class="property-image">
+                        <img src="images/clay-leconey-py8QgUL_wuI-unsplash.jpg" alt="Beach House">
+                        <div class="property-price">$5,200/mo</div>
+                        <div class="property-overlay">
+                            <a href="#" class="btn-view"><i class="fas fa-search"></i></a>
+                            <a href="#" class="btn-save"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Oceanfront Beach House</h3>
+                        <p class="property-address"><i class="fas fa-map-marker-alt"></i> 555 Ocean Blvd, Beachside</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 3 Beds</span>
+                            <span><i class="fas fa-bath"></i> 2 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 2,000 sqft</span>
+                        </div>
+                        <a href="#" class="btn secondary">View Details</a>
+                    </div>
+                </div>
+                <div class="property-card" data-category="sale">
+                    <div class="property-tag sale">For Sale</div>
+                    <div class="property-image">
+                        <img src="images/salman-saqib-oQ7AV5nRxaI-unsplash.jpg" alt="Modern Villa">
+                        <div class="property-price">$1,850,000</div>
+                        <div class="property-overlay">
+                            <a href="#" class="btn-view"><i class="fas fa-search"></i></a>
+                            <a href="#" class="btn-save"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Modern Architectural Villa</h3>
+                        <p class="property-address"><i class="fas fa-map-marker-alt"></i> 888 Hillside Dr, Beverly Hills</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 5 Beds</span>
+                            <span><i class="fas fa-bath"></i> 6 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 5,500 sqft</span>
+                        </div>
+                        <a href="#" class="btn secondary">View Details</a>
+                    </div>
+                </div>
+                <div class="property-card" data-category="rent">
+                    <div class="property-tag rent">For Rent</div>
+                    <div class="property-image">
+                        <img src="images/kky-h30xW8X5CP4-unsplash.jpg" alt="Penthouse">
+                        <div class="property-price">$8,000/mo</div>
+                        <div class="property-overlay">
+                            <a href="#" class="btn-view"><i class="fas fa-search"></i></a>
+                            <a href="#" class="btn-save"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Luxury Penthouse Suite</h3>
+                        <p class="property-address"><i class="fas fa-map-marker-alt"></i> 777 Tower Ave, Financial District</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 3 Beds</span>
+                            <span><i class="fas fa-bath"></i> 3.5 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 3,200 sqft</span>
+                        </div>
+                        <a href="#" class="btn secondary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="load-more">
+                <a href="#" class="btn primary">Load More Properties</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Looking to Sell Your Property?</h2>
+                <p>Our expert agents will help you get the best value for your property</p>
+                <a href="#contact" class="btn primary">List Your Property</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="agents" class="agents">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet Our Agents</h2>
+                <p>Professional real estate experts ready to help you</p>
+            </div>
+            <div class="agents-grid">
+                <div class="agent-card">
+                    <div class="agent-image">
+                        <img src="images/patient.png" alt="Agent 1">
+                    </div>
+                    <div class="agent-details">
+                        <h3>Jennifer Anderson</h3>
+                        <p class="agent-title">Senior Real Estate Agent</p>
+                        <p class="agent-info"><i class="fas fa-phone"></i> (555) 123-4567</p>
+                        <p class="agent-info"><i class="fas fa-envelope"></i> jennifer@webaurastates.com</p>
+                        <div class="agent-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-image">
+                        <img src="images/patient.png" alt="Agent 2">
+                    </div>
+                    <div class="agent-details">
+                        <h3>Michael Rodriguez</h3>
+                        <p class="agent-title">Luxury Property Specialist</p>
+                        <p class="agent-info"><i class="fas fa-phone"></i> (555) 234-5678</p>
+                        <p class="agent-info"><i class="fas fa-envelope"></i> michael@webaurastates.com</p>
+                        <div class="agent-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-image">
+                        <img src="images/patient.png" alt="Agent 3">
+                    </div>
+                    <div class="agent-details">
+                        <h3>Sarah Johnson</h3>
+                        <p class="agent-title">Commercial Property Expert</p>
+                        <p class="agent-info"><i class="fas fa-phone"></i> (555) 345-6789</p>
+                        <p class="agent-info"><i class="fas fa-envelope"></i> sarah@webaurastates.com</p>
+                        <div class="agent-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-image">
+                        <img src="images/patient.png" alt="Agent 4">
+                    </div>
+                    <div class="agent-details">
+                        <h3>David Chen</h3>
+                        <p class="agent-title">Residential Sales Specialist</p>
+                        <p class="agent-info"><i class="fas fa-phone"></i> (555) 456-7890</p>
+                        <p class="agent-info"><i class="fas fa-envelope"></i> david@webaurastates.com</p>
+                        <div class="agent-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Client Testimonials</h2>
+                <p>What our clients say about our services</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"WebAura Estates helped me find my dream home in just two weeks! Their knowledge of the local market and attention to my specific needs made the process smooth and enjoyable. I couldn't be happier with my new home."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/patient.png" alt="Client 1">
+                        <div class="author-info">
+                            <h4>Robert Williams</h4>
+                            <p>Homeowner</p>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="neighborhood">
+        <div class="container">
+            <div class="section-header">
+                <h2>Explore Neighborhoods</h2>
+                <p>Discover the perfect area for your lifestyle</p>
+            </div>
+            <div class="neighborhood-grid">
+                <div class="neighborhood-card">
+                    <div class="neighborhood-image">
+                        <img src="images/nick-agee-Ri3SqoanvCE-unsplash.jpg" alt="Downtown">
+                        <div class="neighborhood-overlay">
+                            <h3>Downtown</h3>
+                            <p>42 Properties</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="neighborhood-card">
+                    <div class="neighborhood-image">
+                        <img src="images/tom-rumble-7lvzopTxjOU-unsplash.jpg" alt="Suburbs">
+                        <div class="neighborhood-overlay">
+                            <h3>Suburbs</h3>
+                            <p>65 Properties</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="neighborhood-card">
+                    <div class="neighborhood-image">
+                        <img src="images/kelly-sikkema-_04AAMhjm_M-unsplash.jpg" alt="Beachfront">
+                        <div class="neighborhood-overlay">
+                            <h3>Beachfront</h3>
+                            <p>28 Properties</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="neighborhood-card">
+                    <div class="neighborhood-image">
+                        <img src="images/sven-V7WkmXntA8M-unsplash.jpg" alt="Countryside">
+                        <div class="neighborhood-overlay">
+                            <h3>Countryside</h3>
+                            <p>37 Properties</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our real estate experts</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-details">
+                            <h3>Our Location</h3>
+                            <p>123 Real Estate Avenue, Suite 500<br>Los Angeles, CA 90001</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-details">
+                            <h3>Call Us</h3>
+                            <p>(555) 123-4567<br>(555) 987-6543</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-details">
+                            <h3>Email Us</h3>
+                            <p>info@webaurastates.com<br>sales@webaurastates.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-details">
+                            <h3>Office Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder="Your Phone">
+                        </div>
+                        <div class="form-group">
+                            <select id="inquiry-type">
+                                <option value="">Select Inquiry Type</option>
+                                <option value="buying">Buying Property</option>
+                                <option value="selling">Selling Property</option>
+                                <option value="renting">Renting Property</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>WebAura<span>Estates</span></h3>
+                    <p>WebAura Estates is a premier real estate agency specializing in luxury properties, residential homes, and commercial real estate. With over 25 years of experience, we provide exceptional service to buyers and sellers across the country.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#properties">Properties</a></li>
+                            <li><a href="#agents">Agents</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Property Types</h4>
+                        <ul>
+                            <li><a href="#">Houses</a></li>
+                            <li><a href="#">Apartments</a></li>
+                            <li><a href="#">Villas</a></li>
+                            <li><a href="#">Commercial</a></li>
+                            <li><a href="#">Land</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Buying Guide</a></li>
+                            <li><a href="#">Selling Tips</a></li>
+                            <li><a href="#">Mortgage Calculator</a></li>
+                            <li><a href="#">Market Trends</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Subscribe to Our Newsletter</h4>
+                    <p>Stay updated with our latest properties and real estate news</p>
+                    <form id="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" id="newsletter-email" placeholder="Your Email Address" required>
+                            <button type="submit" class="btn primary">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> WebAura Estates. All Rights Reserved.</p>
+                <div class="footer-links-bottom">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
