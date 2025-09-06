@@ -118,6 +118,7 @@
 /* Social Icons */
 .social-icons {
   display: flex;
+  justify-self: flex-start;
   gap: 12px;
   margin-top: 20px;
 }
@@ -1127,4 +1128,3 @@
         justify-content: center;
         margin-top: 20px;
       }
-    }
