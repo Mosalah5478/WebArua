@@ -166,12 +166,40 @@
  <!-- AOS Library for animations -->
  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
  <script>
-   // Initialize AOS
+   // Initialize AOS with responsive settings
    AOS.init({
      duration: 500,
      easing: 'ease-in-out',
      once: false,
-     mirror: true
+     mirror: true,
+     disable: 'mobile', // Disable animations on mobile for better performance
+     startEvent: 'DOMContentLoaded',
+     offset: 120, // Offset (in px) from the original trigger point
+     delay: 0, // Default delay before animation starts
+     throttleDelay: 99, // The delay on throttle for detecting scroll events
+     // Responsive settings
+     responsive: {
+       0: {
+         disable: false,
+         once: true,
+         duration: 300
+       },
+       480: {
+         disable: false,
+         once: true,
+         duration: 400
+       },
+       768: {
+         disable: false,
+         once: false,
+         duration: 500
+       }
+     }
+   });
+
+   // Add resize event listener to refresh AOS on window resize
+   window.addEventListener('resize', function() {
+     AOS.refresh();
    });
  </script>
 

@@ -761,50 +761,198 @@
   line-height: 1.6;
 }
 
-/* Responsive */
-@media (max-width: 980px){
-  .hero .wrap{grid-template-columns:1fr; padding-top:56px}
-  .logo3d{justify-content:center}
-  .stats{grid-template-columns:repeat(2,1fr)}
-  .grid{grid-template-columns:1fr 1fr}
-  .services-grid{grid-template-columns:repeat(2,1fr)}
-  .portfolio-grid{grid-template-columns:1fr 1fr}
-  .testimonials-grid{grid-template-columns:1fr 1fr}
-  .about-content{grid-template-columns:1fr}
-  .mission-vision-grid{grid-template-columns:1fr}
-  .team-grid{grid-template-columns:repeat(2,1fr)}
-  #contact .wrap{grid-template-columns:1fr; text-align:center}
-  .cta{justify-content:center}
+/* Responsive Styles - Media Queries */
+
+/* Large Tablets and Small Desktops */
+@media (max-width: 1200px) {
+  .wrap {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  .hero h1 {
+    font-size: clamp(32px, 4vw, 56px);
+  }
+}
+
+/* Tablets and Medium Screens */
+@media (max-width: 980px) {
+  /* Make all images responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Ensure content fits within viewport */
+  .container {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Layout adjustments */
+  .hero .wrap {
+    grid-template-columns: 1fr;
+    padding-top: 56px;
+    gap: 40px;
+  }
+  
+  .logo3d {
+    justify-content: center;
+  }
+  
+  /* Grid adjustments */
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .portfolio-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .mission-vision-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Contact section */
+  #contact .wrap {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .cta {
+    justify-content: center;
+  }
   
   /* Responsive navigation */
   .nav-links {
     gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   
   .nav-link {
     font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+  
+  /* Section spacing */
+  .wrap {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  /* Typography */
+  h2 {
+    font-size: clamp(24px, 2.8vw, 36px);
   }
   
   .about-image {
     height: 300px;
     margin-bottom: 2rem;
   }
+  
+  /* Improve tablet layout */
+  .hero h1 {
+    text-align: center;
+  }
+  
+  .hero p {
+    text-align: center;
+  }
+  
+  .section-heading {
+    text-align: center;
+  }
 }
+    /* Small Tablets and Large Mobile */
     @media (max-width: 640px){
+      /* Grid layouts */
       .stats{grid-template-columns:1fr}
       .grid{grid-template-columns:1fr}
       .services-grid{grid-template-columns:1fr}
       .portfolio-grid{grid-template-columns:1fr}
       .testimonials-grid{grid-template-columns:1fr}
-      .hero h1{font-size:36px}
-      .btn{width:100%}
-      .cta{flex-direction:column; width:100%}
-      .contact-buttons{flex-direction:column; width:100%}
-      .section-intro{font-size:1rem}
+      
+      /* Typography */
+      body {
+        font-size: 15px;
+      }
+      
+      .hero h1{
+        font-size:32px; 
+        text-align:center;
+        line-height: 1.2;
+      }
+      
+      h2 {
+        font-size: clamp(22px, 6vw, 30px);
+        text-align: center;
+      }
+      
+      .eyebrow {
+        text-align: center;
+        display: block;
+      }
+      
+      /* Buttons and CTAs */
+      .btn{
+        width:100%;
+        text-align: center;
+      }
+      
+      .cta{
+        flex-direction:column; 
+        width:100%;
+        gap: 12px;
+      }
+      
+      .contact-buttons{
+        flex-direction:column; 
+        width:100%;
+        gap: 12px;
+      }
+      
+      /* Layout improvements */
+      .section-intro {
+        text-align: center;
+        font-size:1rem;
+        margin-bottom: 30px;
+      }
+      
+      .card {
+        margin-bottom: 20px;
+        padding: 20px;
+      }
+      
+      .social-links {
+        justify-content: center;
+      }
       
       /* Responsive navigation */
       .nav {
         flex-wrap: wrap;
+        padding: 12px 15px;
       }
       
       .nav-links {
@@ -813,12 +961,14 @@
         width: 100%;
         justify-content: space-between;
         order: 3;
+        gap: 8px;
       }
       
       .brand {
         margin-right: auto;
       }
       
+      /* Portfolio adjustments */
       .portfolio-content h3 {
         font-size: 1.2rem;
       }
@@ -826,21 +976,155 @@
       .tech-stack {
         margin: 0.75rem 0;
       }
+      
+      /* Section spacing */
+      .wrap {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      
+      /* Hero section */
+      .hero .wrap {
+        padding-top: 40px;
+        gap: 30px;
+      }
+      
+      .logo3d {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .emblem {
+        margin: 0 auto 20px;
+      }
     }
+    /* Mobile Phones */
     @media (max-width: 480px){
-      .nav{padding:10px 15px}
-      .brand img{height:32px}
-      .wrap{padding:50px 15px}
-      .card{padding:18px}
+      /* Header and navigation */
+      .nav {
+        padding: 10px 15px;
+      }
+      
+      .brand img {
+        height: 32px;
+      }
+      
+      .brand .wordmark {
+        font-size: 0.9rem;
+      }
+      
+      /* Layout adjustments */
+      .wrap {
+        padding: 30px 15px;
+      }
+      
+      .card {
+        padding: 18px;
+      }
       
       /* Responsive navigation */
       .nav-links {
         flex-wrap: wrap;
         gap: 8px;
+        justify-content: center;
       }
       
       .nav-link {
         font-size: 0.8rem;
         padding: 8px 12px;
+      }
+      
+      /* Typography */
+      .hero h1 {
+        font-size: 28px;
+        text-align: center;
+        line-height: 1.2;
+      }
+      
+      .hero p {
+        text-align: center;
+        font-size: 0.95rem;
+      }
+      
+      h2 {
+        font-size: clamp(20px, 5vw, 26px);
+      }
+      
+      h3 {
+        font-size: 1.1rem;
+      }
+      
+      /* Hero section */
+      .logo3d .emblem {
+        width: 100px;
+        height: 100px;
+      }
+      
+      /* Stats section */
+      .stats {
+        gap: 10px;
+      }
+      
+      .stat {
+        padding: 12px;
+      }
+      
+      .stat .k {
+        font-size: 1.5rem;
+      }
+      
+      .stat .t {
+        font-size: 0.8rem;
+      }
+      
+      /* Social icons */
+      .social-icon {
+        width: 36px;
+        height: 36px;
+      }
+      
+      /* Contact section */
+      #contact .wrap {
+        display: flex !important;
+        flex-direction: column;
+      }
+      
+      /* Animations */
+      [data-aos-delay] {
+        transition-delay: 0s !important;
+      }
+    }
+      
+      .cta {
+        align-items: center;
+      }
+      
+      .contact-buttons {
+        align-items: center;
+      }
+      
+      /* Contact page mobile improvements */
+      #contact h1 {
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+      
+      #contact p {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      
+      .call-button, .dm-button {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      
+      .social-icons {
+        justify-content: center;
+        margin-top: 20px;
       }
     }
